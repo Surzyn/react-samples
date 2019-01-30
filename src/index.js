@@ -1,6 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 const BeerComment = (props) => {
     return React.createElement('label', {}, `${props.comment} by ${props.author}`);
-}
+};
 
 const Beer = () => {
     return React.createElement('section', {}, [
@@ -11,14 +14,14 @@ const Beer = () => {
             React.createElement(BeerComment, { comment: 'Nice label', author: 'Robin' })
         ]),
     ]);
-}
+};
 
 const App = () => {
     return React.createElement('article', {}, [
         React.createElement('h1', {}, 'Beers'),
         React.createElement(Beer)
     ]);
-}
+};
 
 ReactDOM.render(
     React.createElement(App),
