@@ -23,13 +23,12 @@ module.exports = {
             "error",
             "windows"
         ],
-        "quotes": [
-            "error",
-            "single"
-        ],
+
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "react/jsx-uses-react": 1,
+        "react/jsx-uses-vars": [2]
     }
 };
