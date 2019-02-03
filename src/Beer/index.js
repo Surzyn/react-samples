@@ -6,6 +6,7 @@ const Beer = () => {
 
     return (
         <section>
+            <h2>Beer</h2>
             <h4>Pinta</h4>
             <span>Rate 6</span>
             <div>
