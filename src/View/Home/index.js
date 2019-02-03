@@ -9,9 +9,10 @@ export default class Home extends React.Component {
         return (
             <section>
                 <h2>Home</h2>
-
+                <p>Strona dla prawdziwych alkoholików</p>
                 <button onClick={() => this.goToBeer()}>Go to beer</button>
             </section>
         );
     }
 }
+
