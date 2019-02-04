@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from "react-redux";
-
 import './beer.css'
-import BeerDetail from './BeerDetail';
 
 import { getBeers } from "../../services/beer-service";
+import BeerDetail from './BeerDetail';
+
 class Beers extends React.Component {
     componentDidMount() {
-        this.props.dispatch(getBeers());
+        this.props.getBeers();
     }
 
     render() {
@@ -24,12 +24,12 @@ class Beers extends React.Component {
     }
 };
 
-
 const mapStateToProps = state => {
-    return {
-        beers: state.beers,
-    };
+    return { beers: state.beers, };
 };
 
+const mapDispatchToProps = dispatch => ({
+    getBeers: () => dispatch(getBeers())
+})
 
-export default connect(mapStateToProps)(Beers);
+export default connect(mapStateToProps, mapDispatchToProps)(Beers);
